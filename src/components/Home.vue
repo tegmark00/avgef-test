@@ -1,5 +1,6 @@
 <template>
     <screen>
+        <Header/>
         <div class="sign-in">
             <div class="sign-in-inner">
                 <h3>
@@ -22,7 +23,7 @@
                         or
                     </span>
                     <div class="sign-in-input-wrap">
-                        <a href="/" class="btn-like">Continue with Apple</a>
+                        <a href="/" class="btn-like"> Continue with Apple</a>
                     </div>
                     <div class="sign-in-input-wrap">
                         <a href="/" class="inv">Continue with Google</a>
@@ -37,7 +38,14 @@
 </template>
 
 <script>
+import Header from "./Header.vue";
+
+
 export default {
+
+    components: {
+        Header
+    }
 
 }
 </script>
@@ -52,7 +60,7 @@ h3 {
 }
 
 div.sign-in {
-    height: 100vh;
+    height: calc(100vh - 72px);
     display: flex;
     align-items: center;
     justify-content: center;
